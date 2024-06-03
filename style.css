@@ -1,0 +1,224 @@
+:root{
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+    /* border: 1px solid red; */
+}
+
+body{
+    background:var(--lightGrayishCyan);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: hidden;
+    gap:2rem;
+}
+
+
+.title{
+    margin-bottom: 0;
+    margin-top: 1rem;
+    color: var(--darkGrayishCyan);
+    font-weight: 700;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 90%  ;
+}
+
+form div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--darkGrayishCyan);
+}
+
+form input{
+    font-family: "Space Mono";
+    padding: 0.5rem;
+    text-align: right;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    color: var(--veryDarkCyan);
+    font-weight: 700;
+    font-size: 1.2rem;
+    background-color: var(--veryLightGrayishCyan);
+    border: none;
+    width: 100%;
+}
+
+
+
+form input::placeholder{
+    text-align: left;
+    font-size: 1.4rem;
+    color: var(--grayishCyan);
+    font-weight: 200;
+}
+.main-container{
+    background:var(--white);
+    max-width: 700px;
+    margin: 1rem auto;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    
+}
+
+.main-container p{
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--darkGrayishCyan);
+}
+
+.main-container .left{
+    background-color: var(--white);
+    width: 50%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.tip-selection{
+    display: flex;
+    gap:0.5rem;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.tip-selection .btn{
+    background-color: var(--veryDarkCyan);
+    color: var(--white);
+    width: 30%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+}
+.main-container .custom-tip{
+    border: none;
+    background-color: var(--white);
+}
+.main-container .custom-tip::placeholder{
+    font-size: 1.1rem;
+    color: var(--darkGrayishCyan);
+    font-weight: 700;
+}
+
+
+
+.main-container .right{
+    background-color: var(--veryDarkCyan);
+    width: 50%;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-container .right div{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main-container .right div p{
+    color: var(--grayishCyan);
+}
+.main-container .right div p span{
+    display: block;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.main-container .right button{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    font-weight: 700;
+    color: var(--veryDarkCyan);
+    background-color: var(--lightGrayishCyan);
+    font-size: 1.2rem;
+}
+.main-container .right .dollars{
+    color: var(--strongCyan);
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.btn:hover{
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+
+.custom-tip:focus{
+    background-color: var(--white);
+    color: var(--veryDarkCyan);
+    text-align: right;
+}
+
+.custom-tip:focus::placeholder{
+    color: transparent;}
+
+
+#bill-alert,#people-alert{
+    display: none;
+    color:red;
+    margin: 0;
+}
+
+@media (max-width:600px){
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .main-container{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .main-container .left,.main-container .right{
+        width: 100%;
+        
+    }
+    /* .main-container .left{
+        margin:-1rem auto;
+    } */
+    .main-container .right{
+        margin-top: -1rem;
+    }
+    .main-container .custom-tip::placeholder{
+        font-size: 0.8rem;
+        color: var(--darkGrayishCyan);
+        font-weight: 700;
+    }
+}

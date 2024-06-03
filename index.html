@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="title">
+      <p>S P L I</p>
+      <p>T T E R</p>
+    </div>
+
+    <div class="main-container">
+      <div class="left">
+        <form action="">
+          <div>
+            <label for="bill-amount">Bill</label>
+            <p id="bill-alert">Invalid value</p>
+          </div>
+          <input type="numeric" id="bill-amount" min="1" placeholder="$"/>
+        </form>
+        <p>Select tip %</p>
+        <div class="tip-selection">
+          <button class="btn tip-btn" data-tip="5">5%</button>
+          <button class="btn tip-btn" data-tip="10">10%</button>
+          <button class="btn tip-btn" data-tip="15">15%</button>
+          <button class="btn tip-btn" data-tip="25">25%</button>
+          <button class="btn tip-btn" data-tip="50">50%</button>
+          <input
+            type="numeric"
+            class="btn custom-tip"
+            min="1"
+            max="100"
+            placeholder="Custom"
+          /><!--Edit this-->
+          <!-- </div> -->
+        </div>
+        <form action="">
+          <div>
+            <label for="people-number">Number of People</label>
+            <p id="people-alert">Invalid value</p>
+          </div>
+          <input type="numberic" id="people-number" min="1" placeholder="$"/>
+        </form>
+      </div>
+      <div class="right">
+        <div>
+          <p><span>Tip Amount</span>/ person</p>
+          <h3 class="dollars" id="tip-amount-display">$0.00</h3>
+        </div>
+        <div>
+          <p><span>Total</span>/ person</p>
+          <h3 class="dollars" id="total-amount-display">$0.00</h3>
+        </div>
+        <button id="reset-btn">RESET</button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
