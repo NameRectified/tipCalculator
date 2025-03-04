@@ -178,15 +178,24 @@ form input::placeholder{
     background-color: var(--strongCyan);
     color: var(--veryDarkCyan);
 }
+.main-container .custom-tip{
+    border: 2px solid var(--darkGrayishCyan);
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--veryDarkCyan);
+    text-align: right;
+    padding: 0.5rem;
 
+}
 .custom-tip:focus{
     background-color: var(--white);
     color: var(--veryDarkCyan);
-    text-align: right;
+    /* text-align: right; */
+    outline: none;
+    border: 2px solid var(--strongCyan);
 }
 
 .custom-tip:focus::placeholder{
-    color: transparent;}
+    color: var(--grayishCyan);}
 
 
 #bill-alert,#people-alert{
@@ -208,7 +217,7 @@ form input::placeholder{
     }
     .main-container .left,.main-container .right{
         width: 100%;
-        
+
     }
     /* .main-container .left{
         margin:-1rem auto;
